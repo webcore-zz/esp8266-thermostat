@@ -1,0 +1,26 @@
+@let thermostatData = websocket$ | async;
+<mat-card appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>Temperature</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <h1>{{ thermostatData?.currentTemp }}&#176; C</h1>
+  </mat-card-content>
+  <mat-card-footer>
+    <div class="slider">
+      <div>
+        <mat-slider min="20" max="40" step="0.1" showTickMarks discrete>
+          <input matSliderThumb [formControl]="formControl" />
+        </mat-slider>
+        <div class="slider-value">
+          <span>max temp</span>
+          <span>{{ formControl.value }} &#176;</span>
+        </div>
+      </div>
+      @let fanOn = !!thermostatData?.fanOn?'Fan On':'Fan Off';
+      <mat-icon [title]="fanOn" [class.fanOn]="!!thermostatData?.fanOn">
+        ac_unit
+      </mat-icon>
+    </div>
+  </mat-card-footer>
+</mat-card>

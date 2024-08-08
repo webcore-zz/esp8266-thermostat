@@ -1,0 +1,45 @@
+:host {
+  display: contents;
+  .mat-mdc-card {
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+
+  .mat-mdc-card-header {
+    justify-content: center;
+  }
+
+  .mat-mdc-card-title,
+  .mat-mdc-card-content {
+    text-align: center;
+  }
+
+  .mat-mdc-card-content {
+    margin: 30px 0;
+    min-width: 215px;
+  }
+
+  .slider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    > div {
+      flex: 1;
+      font-size: smaller;
+    }
+  }
+
+  .slider-value {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .mat-mdc-slider {
+    width: 100%;
+    margin: 0;
+  }
+
+  .fanOn {
+    color: #0084ff;
+  }
+}
