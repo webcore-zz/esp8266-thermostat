@@ -1,6 +1,6 @@
 import { AfterContentInit, Component, inject, ViewChild } from "@angular/core";
 import { MatCardModule } from "@angular/material/card";
-import { ChartConfiguration, ChartOptions } from "chart.js";
+import { ChartConfiguration, ChartOptions, scales } from "chart.js";
 import { BaseChartDirective } from "ng2-charts";
 import { map, Observable } from "rxjs";
 import { ControlService } from "../control.service";
@@ -44,13 +44,38 @@ export class TemperatureChartComponent implements AfterContentInit {
       {
         data: [],
         tension: 0,
-        borderColor: "black",
+        borderColor: "blue",
         backgroundColor: "rgba(255,0,0,0.3)",
-        borderWidth: 0.7,
+        borderWidth: 0.4,
+        pointBorderWidth: 0,
+        pointRadius: 1,
+        pointStyle: "crossRot",
       },
     ],
   };
   public lineChartOptions: ChartOptions<"line"> = {
     responsive: true,
+    layout: {
+      padding: 0,
+    },
+    scales: {
+      x: {
+        ticks: {
+          font: {
+            size: 10,
+          },
+        },
+      },
+      y: {
+        type: "linear",
+        suggestedMin: 26,
+        suggestedMax: 30,
+        ticks: {
+          font: {
+            size: 10,
+          },
+        },
+      },
+    },
   };
 }

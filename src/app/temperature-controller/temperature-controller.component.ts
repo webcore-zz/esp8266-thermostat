@@ -40,7 +40,7 @@ export class TemperatureControllerComponent {
   public ngOnInit(): void {
     this.formControl.valueChanges
       .pipe(
-        debounceTime(300),
+        debounceTime(1000),
         filter((_) => !!this.formControl.valid),
         filter((value) => value !== null),
         switchMap((value) => this.controlservice.setMaxTemp(value)),

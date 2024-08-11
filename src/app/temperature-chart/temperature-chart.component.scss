@@ -3,6 +3,14 @@
   .mat-mdc-card {
     margin: 20px auto;
     padding: 0;
-    width: 100%;
-  }  
+    width: 289px;
+    .mat-mdc-card-header {
+      justify-content: center;
+    }
+    .mat-mdc-card-content {
+      padding-inline: 2px;
+      padding-top:8px;
+      padding-bottom: 4px;
+    }
+  }
 }
