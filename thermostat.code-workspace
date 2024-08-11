@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "esp8266-thermostat",
+			"path": "esp8266-thermostat"
+		}
+	],
+	"settings": {}
+}
