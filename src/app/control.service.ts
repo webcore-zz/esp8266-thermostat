@@ -29,10 +29,10 @@ export class ControlService {
   public setMaxTemp(maxTemp: number): Observable<Thermostat> {
     const formdata = new FormData();
     formdata.append("maxTemp", maxTemp.toString());
-    return this.http.post<Thermostat>("/api/data", formdata);
+    return this.http.post<Thermostat>("http://localhost:4201/api/data", formdata);
   }
 
   public getData(): Observable<Thermostat> {
-    return this.http.get<Thermostat>("/api/data");
+    return this.http.get<Thermostat>("http://localhost:4201/api/data");
   }
 }

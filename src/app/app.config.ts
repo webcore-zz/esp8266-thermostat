@@ -1,11 +1,13 @@
 import { provideHttpClient } from "@angular/common/http";
 import { ApplicationConfig, provideZoneChangeDetection } from "@angular/core";
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
+import { provideAnimationsAsync } from "@angular/platform-browser/animations/async";
+import { provideCharts, withDefaultRegisterables } from "ng2-charts";
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
-    provideHttpClient(), provideAnimationsAsync(), provideCharts(withDefaultRegisterables()),
+    provideHttpClient(),
+    provideAnimationsAsync(),
+    provideCharts(withDefaultRegisterables()),
   ],
 };
