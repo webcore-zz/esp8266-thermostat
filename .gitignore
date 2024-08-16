@@ -40,4 +40,4 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
-esp8266-thermostat/data
+/esp8266-thermostat/data
